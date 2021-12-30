@@ -7,6 +7,7 @@ public class Hello {
           int myTotal = myFirstNum + mySecondNum + myThirdNum;
           int myLastOne = 1000 - myTotal;
           System.out.println(myLastOne);
+          System.out.println(myLastOne);
 
      }
 }
