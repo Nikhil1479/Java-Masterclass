@@ -1,7 +1,7 @@
 public class seconds {
     public static void main(String[] args)
     {
-        int mySec = 7209, hours = 0, mins = 0;
+        int mySec = 7890, hours = 0, mins = 0;
 
         hours = mySec / 3600;  //    3663/3600 = 1
         mySec = mySec % 3600; //     3663 % 3600 = 63
