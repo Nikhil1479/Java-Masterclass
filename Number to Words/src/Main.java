@@ -21,7 +21,7 @@ public class Main {
                 break;
             case 1:
                 System.out.println("ONE");
-                break;
+                break; 
             case 2:
                 System.out.println("TWO");
                 break;
