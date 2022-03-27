@@ -10,44 +10,67 @@ NOTE: Do not add main method to solution code.
 
 public class Main {
     public static void main(String[] args) {
-        printNumberInWord(7);
+        printNumberInWord(100);
     }
     public static void printNumberInWord(int num)
     {
-        switch (num)
+        int i=1;
+        num = reverse(num);
+        while(i < )
         {
-            case 0:
-                System.out.println("ZERO");
-                break;
-            case 1:
-                System.out.println("ONE");
-                break; 
-            case 2:
-                System.out.println("TWO");
-                break;
-            case 3:
-                System.out.println("THREE");
-                break;
-            case 4:
-                System.out.println("FOUR");
-                break;
-            case 5:
-                System.out.println("FIVE");
-                break;
-            case 6:
-                System.out.println("SIX");
-                break;
-            case 7:
-                System.out.println("SEVEN");
-                break;
-            case 8:
-                System.out.println("EIGHT");
-                break;
-            case 9:
-                System.out.println("NINE");
-                break;
-            default:
-                System.out.println("OTHER");
+            switch (num % 10)
+            {
+                case 0:
+                    System.out.println("Zero");
+                    break;
+                case 1:
+                    System.out.println("One");
+                    break;
+                case 2:
+                    System.out.println("Two");
+                    break;
+                case 3:
+                    System.out.println("Three");
+                    break;
+                case 4:
+                    System.out.println("Four");
+                    break;
+                case 5:
+                    System.out.println("Five");
+                    break;
+                case 6:
+                    System.out.println("Six");
+                    break;
+                case 7:
+                    System.out.println("Seven");
+                    break;
+                case 8:
+                    System.out.println("Eight");
+                    break;
+                case 9:
+                    System.out.println("Nine");
+                    break;
+            }
+            num = num / 10; i++;
         }
+    }
+    public static int reverse(int num){
+        int reverse  = 0, remainder;
+        while(num != 0)
+        {
+            remainder = num % 10;
+            reverse = reverse * 10 + remainder;
+            num /= 10;
+        }
+        return reverse;
+    }
+    public static int getDigitCounter(int num)
+    {
+        int count = 0;
+        while (num != 0) {
+            num = num / 10;
+            ++count;
+        }
+        return count;
     }
 }
