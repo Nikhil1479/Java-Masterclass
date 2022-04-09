@@ -1,4 +1,4 @@
-/* We have a dog that likes to bark.  We need to wake up if the dog is barking at night!
+/**  We have a dog that likes to bark.  We need to wake up if the dog is barking at night!
 Write a method shouldWakeUp that has 2 parameters.
 
 1st parameter should be of type boolean and be named barking it represents if our dog is currently barking.
@@ -18,6 +18,9 @@ TIP: Use the if else statement with multiple conditions.
 NOTE: The shouldWakeUp method  needs to be defined as public static like we have been doing so far in the course.
 NOTE: Do not add a  main method to solution code.*/
 
+/**
+ * If the dog is barking and the time is between 22pm and 8am, then the dog should wake up
+ */
 public class BarkingDog {
     public static boolean shouldWakeUp(boolean barking, int hourofDay)
     {

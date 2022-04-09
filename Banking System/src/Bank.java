@@ -1,3 +1,6 @@
+/**
+ * This class is used to create a bank account.
+ */
 public class Bank {
     private int accountNumber;
     private double balance;
@@ -14,6 +17,7 @@ public class Bank {
     }
 
 //  Setters
+    // The above code is the setters.
     public void setAccountNumber(int accountNumber)
     {
         this.accountNumber = accountNumber;
