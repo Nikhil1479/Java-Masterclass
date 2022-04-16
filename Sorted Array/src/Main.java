@@ -39,5 +39,4 @@ class Main{
             System.out.println("Element " + i + " contents " + array[i]);
         }
     }
-
 }
