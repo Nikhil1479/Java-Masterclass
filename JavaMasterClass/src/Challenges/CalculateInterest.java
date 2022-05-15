@@ -1,15 +1,17 @@
-/**
-using the for statement, call the calculateInterest method with
-the amount of 10000 with an interestRate of 2,3,4,5,6,7, and 8
-and print the results to the console window.
+package Challenges;
 
-How would you modify the for loop above to do the same thing as
-shown but to start from 8% and work back to 2%
+/**
+ using the for statement, call the calculateInterest method with
+ the amount of 10000 with an interestRate of 2,3,4,5,6,7, and 8
+ and print the results to the console window.
+
+ How would you modify the for loop above to do the same thing as
+ shown but to start from 8% and work back to 2%
 
  */
 
 
-public class Main {
+public class CalculateInterest {
     public static void main(String[] args) {
         for(int i=2; i <=5; i++)
         {

@@ -1,5 +1,4 @@
-import org.w3c.dom.ls.LSOutput;
-
+package ArrayList.GroceryList;
 import java.util.Scanner;
 
 public class Main {
