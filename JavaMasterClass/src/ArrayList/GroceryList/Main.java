@@ -1,15 +1,17 @@
 package ArrayList.GroceryList;
+
 import java.util.Scanner;
 
 public class Main {
     private static Scanner sc = new Scanner(System.in);
     private static GroceryList groceryList = new GroceryList();
+
     public static void main(String[] args) {
         boolean quit = false;
         int choice;
         printInstructions();
 
-        while(!quit) {
+        while (!quit) {
             System.out.println("Enter your Choice: ");
             choice = sc.nextInt();
             sc.nextLine();
@@ -25,7 +27,7 @@ public class Main {
         }
     }
 
-    public static void printInstructions(){
+    public static void printInstructions() {
 
         System.out.println("\nPress");
         System.out.println("\t 0 - To print choice options");
@@ -37,32 +39,33 @@ public class Main {
         System.out.println("\t 6 - Exit");
     }
 
-    public static void addItem(){
+    public static void addItem() {
         System.out.println("Enter an Item you want to add in the list: ");
         groceryList.addItem(sc.nextLine());
     }
 
-    public static void modifyItem(){
+    public static void modifyItem() {
         System.out.println("Enter index number: ");
         int itemNo = sc.nextInt();
         sc.nextLine();
         System.out.println("Enter new Item: ");
         String itemName = sc.nextLine();
 
-        groceryList.modifyItem(itemNo-1, itemName);
+        groceryList.modifyItem(itemNo - 1, itemName);
     }
 
-    public static void removeItem(){
+    public static void removeItem() {
         System.out.println("Enter item number: ");
         int itemNo = sc.nextInt();
         sc.nextLine();
-        groceryList.removeItem(itemNo-1);
+        groceryList.removeItem(itemNo - 1);
     }
-    public static void searchItem(){
+
+    public static void searchItem() {
         System.out.println("Enter An Item you want to search: ");
         String itemName = sc.nextLine();
 
-        if(groceryList.searchItem(itemName) != null){
+        if (groceryList.searchItem(itemName) != null) {
             System.out.println("Found " + itemName + " in our list");
         }
     }

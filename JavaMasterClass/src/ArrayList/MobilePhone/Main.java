@@ -6,44 +6,43 @@ public class Main {
     private static Scanner sc = new Scanner(System.in);
     private static MobilePhone mobilePhone = new MobilePhone("+91 8273011131");
 
-
     public static void main(String[] args) {
 
-    boolean quit = false;
-    int choice;
+        boolean quit = false;
+        int choice;
 
-    printInstructions();
-    while(!quit){
-        System.out.println("Enter your Choice: ");
-        choice = sc.nextInt();
-        sc.nextLine();
+        printInstructions();
+        while (!quit) {
+            System.out.println("Enter your Choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
 
-        switch (choice){
-            case 0:
-                printInstructions();
-                break;
-            case 1:
-                printContacts();
-                break;
-            case 2:
-                addContact();
-                break;
-            case 3:
-                updateContact();
-                break;
-            case 4:
-                removeContact();
-                break;
-            case 5:
-                queryContact();
-                break;
-            case 6:
-                quit = true;
+            switch (choice) {
+                case 0:
+                    printInstructions();
+                    break;
+                case 1:
+                    printContacts();
+                    break;
+                case 2:
+                    addContact();
+                    break;
+                case 3:
+                    updateContact();
+                    break;
+                case 4:
+                    removeContact();
+                    break;
+                case 5:
+                    queryContact();
+                    break;
+                case 6:
+                    quit = true;
             }
         }
     }
 
-    public static void printInstructions(){
+    public static void printInstructions() {
         System.out.println("\nPress");
         System.out.println("\t0 - Print Instructions");
         System.out.println("\t1 - Print List of Contacts");
@@ -53,12 +52,12 @@ public class Main {
         System.out.println("\t5 - Query Contact");
     }
 
-    public static void printContacts(){
+    public static void printContacts() {
         System.out.println("Contact List");
         mobilePhone.printContacts();
     }
 
-    public static void addContact(){
+    public static void addContact() {
         System.out.println("Enter Contact Name");
         String name = sc.nextLine();
 
@@ -67,20 +66,19 @@ public class Main {
 
         Contact newContact = Contact.createContact(name, phone);
 
-        if(mobilePhone.addNewContact(newContact)){
+        if (mobilePhone.addNewContact(newContact)) {
             System.out.println("New Contact Added " + name + ", phone = " + phone);
-        }
-        else{
+        } else {
             System.out.println("Cannot add " + name + " already on file");
         }
     }
 
-    public static void updateContact(){
+    public static void updateContact() {
         System.out.println("Enter existing contact");
         String name = sc.nextLine();
 
         Contact ExistingContact = mobilePhone.queryContact(name);
-        if(ExistingContact == null){
+        if (ExistingContact == null) {
             System.out.println("Contact Not Found");
             return;
         }
@@ -89,48 +87,48 @@ public class Main {
         String newContactName = sc.nextLine();
 
         System.out.println("Enter Phone Number");
-        String newContactPhone  = sc.nextLine();
+        String newContactPhone = sc.nextLine();
 
         Contact newContact = Contact.createContact(newContactName, newContactPhone);
 
-        if(mobilePhone.updateContact(ExistingContact,newContact)){
+        if (mobilePhone.updateContact(ExistingContact, newContact)) {
             System.out.println(newContact.getName() + " successfully updated");
-        }
-        else{
+        } else {
             System.out.println("Error updating Record");
         }
     }
 
-    public static void removeContact(){
+    public static void removeContact() {
         System.out.println("Enter Name of Contact you want to remove: ");
         String name = sc.nextLine();
 
         Contact existingContact = mobilePhone.queryContact(name);
 
-        if(existingContact == null){
+        if (existingContact == null) {
             System.out.println("Contact not found!!");
             return;
         }
 
-        else{
+        else {
             System.out.println(existingContact.getName() + " removed from contacts");
             mobilePhone.removeContact(existingContact);
         }
     }
 
-    public static void queryContact(){
+    public static void queryContact() {
         System.out.println("Enter Existing Contact Name: ");
         String name = sc.nextLine();
 
         Contact existingContact = mobilePhone.queryContact(name);
 
-        if(existingContact == null){
+        if (existingContact == null) {
             System.out.println("Contact not found!!");
             return;
         }
 
-        else{
-            System.out.println("Name: " + existingContact.getName() + "\nPhone Number: " + existingContact.getPhoneNumber());
+        else {
+            System.out.println(
+                    "Name: " + existingContact.getName() + "\nPhone Number: " + existingContact.getPhoneNumber());
 
         }
 

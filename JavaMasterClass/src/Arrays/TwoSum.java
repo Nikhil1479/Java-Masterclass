@@ -5,6 +5,15 @@ import java.util.ArrayList;
 class TwoSum {
 
 
+
+    /**
+     * We loop through the array, and for each element, we loop through the array again, and check if the sum of the two
+     * elements is equal to the target
+     *
+     * @param nums an array of integers
+     * @param target the target sum
+     * @return The indices of the two numbers that add up to the target.
+     */
     public static int[] twoSum(int[] nums, int target) {
         int sum = 0;
     int[] indices = new int[2];

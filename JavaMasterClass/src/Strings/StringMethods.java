@@ -7,8 +7,13 @@ public class StringMethods {
     public static void main(String[] args) {
 
         String str1 = "Nikhil";
-        String str2 = "Nikhil";
+        String str2 = "Mikhil";
 
+        if(str1.compareTo(str2) < 0 ){
+            System.out.println("str2: "+str2);
+        }else{
+            System.out.println("str1: "+str1);
+        }
 //      We are not comparing the content "Nikhil"
 //      We are comparing the hashCodes in str1 and str2 which will be the same as the "Nikhil".
 //      Comparing the hashCode of str1 and str2.
@@ -74,8 +79,10 @@ public class StringMethods {
         int beginIndex = 6;
         int endIndex = 11;
         String substr = str.substring(beginIndex, endIndex - 1); //endIndex-1 because in Strings character indexing starts from 0 to n.
+        System.out.println(substr);
 
-//      4) contains() -> returns true or false after matching sequence of char value
+
+//      4) contains() -> returns true or false after a matching sequence of char value
         System.out.println("\ncontains() Method");
         boolean contains;
         contains = str.contains("John");
@@ -131,7 +138,7 @@ public class StringMethods {
         System.out.println("\ntrim() Method");
         System.out.println(str.trim());
 
-//     13) toCharArray() -> converts the string into character array
+//     13) toCharArray() -> converts the string into a character array
         System.out.println("\ntoCharArray Method");
         char[] charArray = str.toCharArray();
         for (int i = 0; i < charArray.length; i++) {

@@ -46,5 +46,5 @@ public class MinimumElement {
             System.out.print(myArray[i] + ", " );
         }
         System.out.print("]");
-    }
-}
+    } //PrintArray
+} // class
