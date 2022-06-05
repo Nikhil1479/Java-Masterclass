@@ -30,7 +30,7 @@ public class Album {
             playlist.add(checkedSong);
             return true;
         }
-//        System.out.println("The song " + title + " is not in this album");
+        System.out.println("The song " + title + " is not in this album");
         return false;
     }
 
@@ -41,7 +41,7 @@ public class Album {
             playlist.add(checkedSong);
             return true;
         }
-//        System.out.println("The album does not have a track " + trackNumber);
+        System.out.println("The album does not have a track " + trackNumber);
         return false;
 
     }
