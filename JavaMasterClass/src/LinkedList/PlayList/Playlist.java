@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
 
-public class Main {
+public class Playlist {
 
     public static void main(String[] args) {
         ArrayList<Album> albums = new ArrayList<Album>();
@@ -37,6 +37,7 @@ public class Main {
         albums.get(1).addToPlaylist("Code", playlist);
         albums.get(1).addToPlaylist("RunIt", playlist);
 
+        System.out.println(playlist);
         play(playlist);
     }
 
